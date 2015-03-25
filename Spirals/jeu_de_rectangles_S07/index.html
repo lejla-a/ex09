@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jeu_de_rectangles</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <h1>Sortir rectangle rouge</h1>
+
+    <p>
+      Le but est de déplacer le rectangle rouge dans la zone noir sans faire de collisions avec les autres rectangles.
+      Une minute et une seule vie sont accordées pour accomplir cette tâche.
+    </p>
+
+    <h2>Cliquez sur le canvas pour démarrer ou pauser le jeu.</h2>
+
+    <section>
+      Dernier temps <label id="best-time" class="marker">0</label>
+    </section>
+
+    <section>
+      Le temps écoulé <label id="time" class="marker">0</label>
+    </section>
+
+    <section>
+      Niveau <label id="niveau" class="marker">0</label>
+    </section>
+
+    <section>
+      Difficulté
+      <select id='speed-limit'>
+        <option value='4' selected='selected'>Facile</option>
+        <option value='8'>Normal</option>
+        <option value='14'>Difficile</option>
+        <option value='18'>Très difficile</option>
+        <option value='25'>Extrême</option>
+      </select>
+
+      <label id="msg" class="marker"></label>
+    </section>
+
+    <section>
+      <canvas id="canvas" width="800" height="600">
+        Canvas is not supported in your browser.
+      </canvas>
+    </section>
+
+    <section id="git" class="git"></section>
+
+    <script type="application/dart" src="main.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
